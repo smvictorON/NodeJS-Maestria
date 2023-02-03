@@ -1,0 +1,117 @@
+- Node é uma runtime JS(biblioteca usada por um compilador durante a execucao de um programa)
+- Construida na V8 engine (c++)
+- Uma das vantagens é a alta performance
+- NPM é um gerenciador de pacotes
+- Com o comando node eu consigo executar um terminal pra basico similar ao do navegador
+- Modulo do File System é nativo do node, importado como 'fs'
+- fs.readFile é usado para ler arquivos, o segundo parametro é o encoding que passando 'utf8' pode ser usado com acentuações
+- Modulos podem ser divididos em 3: Internos, Externos e Core Modules(nativo)
+- Para exportar de forma padrão os modulos pode se usar o module.exports e importar com require
+- Mudando a extensão para mjs os modulos podem ser exportados/importados padrão ES6
+- Split divide uma string no ponto que voce passar, depois basta coloca o indice que voce quer Ex: suaString = "nome=victor" suaString.split("=")[1] resulta em victor e suaString.split("=")[0] resulta em nome
+- Minimist é um pacote que ajuda a trabalhar com node puro
+- Chalk é usado para melhorar a leitura do console
+- Readline serve para receber a entrada de dados pelo console
+- Inquirer é como o readline mais trabalhado, implementa Promises
+- Event Emitter serve para trigar código conforme a execução
+- Um erro inesperado para o programa por isso é sempre bom tratar com try/catch
+- http é um core module basico do node para trabalhar com requisições
+- modulo url serve para decompor uma url com o metodo parse
+- modulo paht pode ser usado para trabalhar com caminhos
+- com o comando "npx npm-check-updates -u" ele chega se existe alguma atualizada para os pacotes do package
+- comando "npm link nodedopacote" para linkar um pacote global no seu projeto
+- comando npx executa pacotes e scripts
+- process.exit encerra o programa
+- express é um framework que prove ferramentas para o backend
+- nodemon faz o reload a cada modificação no projeto, deve ser salvo com --save-dev
+- middleware é um código que executa antes de entrar na rota da req
+- é possível inserir css com middlewares com express.static
+- através da tag <link> posso acessar o css para a página
+- 404 é o código para página nao encontrada
+
+- Handlebars vai permitir exibir um html dinamico, através de {{}}, Handlebars tem como objetivo não deixar tanta lógica no frontend
+- com {{#with}} podemos abstria os campos do objeto no handlebars
+
+- app.use(express.static('public')) define a pasta dos arquivos estáticos
+
+- connection pool faz um cache de uma query e se precisar fazer de novo a mesma query com essa ferramenta a reposta fica muito mais rápida
+- sequelize é um ORM(object relational mapper) que facilita a comunicação com o banco assim com o mongoose do mongoose
+- o force true no sync da conexão com o banco apaga todas as tabelas e recria denovo "limpa o banco"
+
+- o comando mongo no terminal nos da acesso ao mongodb da maquina
+- o comando show dbs no mongo mostra todas as databases do mongo
+- use nomedobanco cria uma nova database mas não lista pois ainda nao tem dados
+- db.nomedacollection.insertOne({dadoString: "30", dadoNumber: 30}) para criar um registro
+- db.nomedacollection.findOne({dadoString: "30", dadoNumber: 30}) para achar um registro
+
+- os status de respostas http ex: 200, 404, 500 cada um tem uma faixa função e cada faixa de numero significa algo diferente
+
+- no mongoose o findOneAndUpdate retorna o dado antes de ser atualizado, se quiser o novo basta add {new: true}
+
+- para retirar um campo da consulta findById basta colocar .select('-seucampo')
+
+- para testar envio de imagens com o thundercliente do vscode é só usar o formdata/form
+
+- npm config set init-author-name Victor, seta seu nome e após isso toda vez que é dado init em um projeto ele ja vai definir o nome, pode ser feito para outros campos tambem
+- npm get obtem as configurações padroes ao iniciar com npm init
+- npm config delete init-author-name, delete a configuração padrao ao iniciar o projeto com npm init
+
+- request é um pacote basico para requests
+
+- modulos globais nao aparecem no package é recomendado colocar global somente pacotes para trabalhor como Ex: debug, formata codigo, testes...
+- executando o comando npm link nomedopacote ele faz um link do pacote global com o projeto
+- para remover um modulo global basta executar o comando npm remove nomedopacote -g, fazendo isso todos os projetos com link vão parar de funcionar
+
+- para listar os pacotes instalados basta executar o comando npm list (adicionando o --depth=0 ele mostrara só as dependencias 'pais' e não toda a arvóre de dependencias)
+- para listar os pacotes globais instalados basta executar o comando npm list -g
+
+- executando o comando npm prune voce limpa as dependencias não usadas, (compara o que tem no node_modules com as dependencias do package.json) *****
+- executando o comando npm search react ele faz uma busca em todos os pacotes do npm com essa palavra chave *****
+- executando o comando npm outdated ele verifica se existe dependencias que podem ser atualizadas, dps se quiser atualizar basta executar npm update ***
+- executando o comando npm cache verify voce pode verificar o cache no computador e executando o comando npm cache clean --force voce pode limpar o cache *****
+- executando o comando npm audit voce pode detectar falhas de segurança nos modulos e executando o comando npm audit fix voce pode corrigi-las dentro do possível *****
+- executando o comando npm view nomedopacote ele mostra os detalhes do pacote no npm *****
+- executando o comando npm docs nomedopacote voce pode acessar a documentação do pacote no npm (geralmente a página oficial ou github) *****
+- executando o comando npm home nomedopacote voce pode acessar a pagina home do pacote (parecido com o npm docs) *****
+- executando o comando npm dedupe voce consegue 'simplificar' as dependencias de um projeto Ex: se 2 pacotes dependem de um mesmo pacote ele coloca os 2 um nivel acima para os 2 acessarem a mesma dependencia *****
+- executando o comando npm i nomedopacote --no-save voce faz com que ela não fique salva no package.json (bom pra usar quando está testando algum pacote novo) *****
+- executando o comando npm run voce consegue ver os scripts configurados no package.json *****
+
+- adicionando a tag <!DOCTYPE html> mostra ao navegador que se trata de html5
+- cada tipo de headings Ex: h1, h2, h3 ... tem um peso diferente quando uma pessoa busca uma palavra na web
+- colocar alt em todas as imagens para ranquear melhor a pagina, para pessoas cegas e quando a imagem nao aparece o texto vai aparecer
+- campos readonly são enviados no form mas os disableds não
+- adicionando <meta charset="utf-8"> no header do html previni que seja exibido algo caractere incorreto se tiver acento
+- adicionando <meta name="keywords" content="some keywords"> ou <meta name="description" content="some description"> ajuda a página a ser encontrada
+- adicionando <meta name="viewport" content="width=device-width, initial-scale=1.0"> ajuda a pagina a ser renderizada no tamanho certo do dispositivo
+- HTML semantico ajuda a legibilidade do código inserindo os componentes no locais corretos Ex: <header/>, <nav/>, <main/>, <section/>, <aside/>, <footer/>
+
+- CSS deve sempre ser adicionado no seu próprio arquivo e não entre tags <style> no html muito menos inline
+- position static é como o nome diz estática não aceita top/left/right/bottom
+- float serve para flutuar algum elemento, um trick é envolver em um div com overflow auto para respeitar as alturas
+- adicionando a propriedade clear faz com o elemento nao varie se tiver um objeto flutuando por perto
+- medida em obdece o fontsize do elemento pai, e o rem do elemento root (<html></html>)
+
+- mysqldump é usado para exportar um banco para um arquivo
+
+- o comando pretty() formata o dado para uma melhor visualização Ex: db.collection.find({}).pretty()
+- o comando db.createCollection("nomedacollection", {
+    capped: true,
+    size: 1000, //tamanho maximo em bytes
+    max: 5 //numero de registro, quando atingir o limite ele vai substituindo o primeiro a ser criado pela nova inserção
+})
+- o _id do mongo nada mais é que uma hash criada com base to timestamp
+- o comando db.nomedacollection.drop() deleta a collection com todos os dados
+- o comando db.dropDatabase.drop() deleta a base de dados com todas collections e todos os dados
+- o comando mongoimport <arquivo> -d <database> -c <collection> importa um arquivo JSON para uma collection
+- o comando mongoexport -c <collection> -d <database> -o <nomedoarquivo>.json exporta uma collection em arquivo JSON
+- o comando mongodump -d <database> -o <diretório> exporta uma base inteira
+- o comando mongorestore <diretório> restaura um banco a partir dos arquivos do diretório
+- o comando mongostat mostrar algumas estatisticas do banco como consultas, consumo e outros
+- o comando db.nomecollection.replaceOne({_id: },{novodado: valor}) substitui todos os campos antigos por os novos passados
+- o parametro $push no updateOne adiciona um valor a um array do doc Ex: db.nomedacollection.updateOne({_id: 'xxx'}, {$push: {nomedoarray: valor}})
+- não é obrigátorio usar o id do mongo, se definir ele na hora do insert ele pode ter qualquer valor Ex: db.nomedacollection.insertOne({_id: "meuid", nome: "victor"})
+- Write Concern: se inserimos a flag {w: "majority", wtimeout: 100} na hora de inserir um document ele vai retornar um erro se o o insert exceder esse tempo Ex: db.nomedacollection.insertOne({_id: "meuid", nome: "victor"}, {w: "majority", wtimeout: 100})
+
+- fetch é um jeito nativo de fazer requisições com JS
+- adicionado o defer na importação dos scripts no html significa que é para esperara o html carregar para carregar o js Ex: <script src="js/scripts.js" defer></script>

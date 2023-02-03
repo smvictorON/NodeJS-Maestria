@@ -1,0 +1,7 @@
+{"_id":{"$oid":"63d9abf9a272b0725d8bce78"},"name":"Book4","value":60}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce79"},"name":"Book2","value":40}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce7a"},"name":"Book7","value":90}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce7b"},"name":"Book1","value":30}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce7c"},"name":"Book5","value":70}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce7d"},"name":"Book3","value":50}
+{"_id":{"$oid":"63d9abf9a272b0725d8bce7e"},"name":"Book6","value":80}
